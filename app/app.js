@@ -14,3 +14,11 @@ var App = Ember.Application.extend({
 loadInitializers(App, config.modulePrefix);
 
 export default App;
+
+import ApplicationRouteMixin from 'simple-auth/mixins/application-route-mixin';
+
+
+import CustomAuthenticator from 'app/utils/auth/custom_authenticator';
+import CustomAuthorizer from 'app/utils/auth/custom_authorizer';
+
+export default Ember.Route.extend(ApplicationRouteMixin);
